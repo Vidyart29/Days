@@ -14,5 +14,5 @@ var score=0;
      }
 
  }
-play("where do i work?", "cisco");
+play("where do i work?", "cso");
 play("where do i live?", "mumbai");
