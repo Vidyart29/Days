@@ -1,0 +1,78 @@
+<!-- Reading from input -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Expenses</title>
+
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 20%;
+            margin-top: 20%;
+        }
+        button{
+            border-color: teal;
+            border-width: 20px;
+        }
+        #inputAmount{
+border-color: brown;
+border-style: dashed;
+height: 10vh;
+width: 30vh;
+        }
+        button, inputAmount{
+            margin: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- 1 -->
+    <input id= "inputAmount" type= "text"></input>
+    <button id="btnAddExpense">+</button>
+    <script>
+
+let totalExpense=0
+// 4
+function addExpenseTotal(){
+    // read value from inputAmount
+    // 5
+    const inputElement = document.querySelector("#inputAmount")
+    //6 
+    const textAmount = inputElement.value
+    
+    // when printing too many things to console, out a {} and make it an object
+    console.log({textAmount})
+    // console.log(textAmount)
+    
+    // convert string to number, parseInt does that
+    //  7
+const expense = parseInt(textAmount, 10)
+console.log({expense})
+// console.log(expense)
+
+    // add that value totalExpense
+    // 8
+    totalExpense=totalExpense+expense
+    console.log(totalExpense)
+
+}
+
+// get the btn element
+// 2
+    const element= document.querySelector("#btnAddExpense")
+    // console.log(element)
+    
+    // listen to click event
+    // 3
+    element.addEventListener("click", addExpenseTotal, false)
+        </script>
+
+</body>
+</html>
